@@ -46,7 +46,7 @@ it ("can compute the reachability graph of a concurrent Petri net", function ()
   -- and thus has a successor state:
   assert.is_not_nil (initial.successors [petrinet.t1])
   -- check that final state (after firering t3) has marking { p1 = 0, p2 = 0, p3 = 0, p4 = 0, p5=1 }
-  assert.are.equal (initial.successors [petrinet.t3].marking, Marking.create {
+ assert.are.equal (initial.successors [petrinet.t1].successors [petrinet.t2].successors [petrinet.t3].marking, Marking.create {
     [petrinet.p1] = 0,
     [petrinet.p2] = 0,
     [petrinet.p3] = 0,
