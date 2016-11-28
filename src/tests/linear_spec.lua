@@ -40,5 +40,5 @@ it ("can compute the reachability graph of a linear Petri net", function ()
   -- check that transition `t` is fired from the initial state,
   -- and thus has a successor state:
   assert.is_not_nil (initial.successors [petrinet.t1])
-)
+
 end)
